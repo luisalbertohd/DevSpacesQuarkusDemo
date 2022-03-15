@@ -12,21 +12,21 @@ import io.quarkus.security.identity.SecurityIdentity;
 public class UserResource {
 
     @Inject
-    SecurityIdentity keycloakSecurityContext;
+    SecurityIdentity identity;
 
     @GET
     @Path("/me")
     @Produces(MediaType.APPLICATION_JSON)
     public User me() {
-        return new User(keycloakSecurityContext);
+        return new User(identity);
     }
 
     public static class User {
 
         private final String userName;
 
-        User(SecurityIdentity securityContext) {
-            this.userName = securityContext.getPrincipal().getName();
+        User(SecurityIdentity identity) {
+            this.userName = identity.getPrincipal().getName();
         }
 
         public String getUserName() {

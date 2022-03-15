@@ -10,7 +10,7 @@ public class AdminResource {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public String manage() {
+    public String admin() {
         return "granted";
     }
 }

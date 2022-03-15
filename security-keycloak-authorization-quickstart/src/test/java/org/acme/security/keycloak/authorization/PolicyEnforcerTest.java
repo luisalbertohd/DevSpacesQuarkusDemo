@@ -20,6 +20,12 @@ public class PolicyEnforcerTest {
                 .when().get("/api/users/me")
                 .then()
                 .statusCode(200);
+
+        RestAssured.given().auth().oauth2(getAccessToken("admin"))
+                .when().get("/api/users/me")
+                .then()
+                .statusCode(200);
+
         RestAssured.given().auth().oauth2(getAccessToken("jdoe"))
                 .when().get("/api/users/me")
                 .then()
