@@ -6,7 +6,7 @@ import jakarta.enterprise.context.ApplicationScoped;
 public class GreetingService {
 
     public String greeting(String name) {
-        return "Hola Pueblo Feliz Tonto2" + name;
+        return "Hola Pueblo Feliz Tonto4" + name;
     }
 
 }
