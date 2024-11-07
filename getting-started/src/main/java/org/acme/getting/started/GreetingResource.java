@@ -22,6 +22,6 @@ public class GreetingResource {
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
-        return "Microservicio CNA Version 2";
+        return "Microservicio CNA Version 3";
     }
 }
